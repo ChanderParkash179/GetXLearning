@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx/Utils/myroutes.dart';
 import 'package:getx/views/Buttons.dart';
+import 'package:getx/views/Navigation.dart';
 import 'package:getx/views/Snakbar.dart';
 import 'package:getx/views/ThemeBottomSheetDialog.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
         MyRoutes().buttons: (context) => HomeScreen(),
         MyRoutes().snakebar: (context) => Snakbar(),
         MyRoutes().tbsa: (context) => TBsD(),
+        MyRoutes().nav: (context) => Navigation(),
       },
     );
   }

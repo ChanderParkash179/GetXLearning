@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:getx/Utils/myroutes.dart';
+import 'package:getx/views/Navigation.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -34,6 +36,14 @@ class _HomeScreenState extends State<HomeScreen> {
                     Navigator.pushNamed(context, MyRoutes().tbsa);
                   },
                   child: const Text('Themes, BottomSheet & AlertDialog')),
+              const SizedBox(
+                height: 10,
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    Get.to(Navigation());
+                  },
+                  child: const Text('Navigation')),
             ],
           ),
         ),
