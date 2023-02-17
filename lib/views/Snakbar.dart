@@ -1,20 +1,26 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class Snakbar extends StatefulWidget {
+  const Snakbar({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<Snakbar> createState() => _SnakbarState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _SnakbarState extends State<Snakbar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('GetX Learning'),
+        title: const Text('SnakBar'),
+      ),
+      body: const SafeArea(
+        child: Center(
+          child: Text('Snakbar in GetX'),
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
@@ -22,6 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
             'GetX',
             'Welcome to GetX Learning',
             snackPosition: SnackPosition.TOP,
+            icon: const Icon(CupertinoIcons.mail),
           );
         },
         child: const Icon(Icons.add),

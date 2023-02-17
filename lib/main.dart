@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:getx/views/HomeScreen.dart';
 import 'package:get/get.dart';
+import 'package:getx/Utils/myroutes.dart';
+import 'package:getx/views/Buttons.dart';
+import 'package:getx/views/Snakbar.dart';
+import 'package:getx/views/ThemeBottomSheetDialog.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -15,9 +18,14 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
-        fontFamily: GoogleFonts.lato().fontFamily,
+        fontFamily: GoogleFonts.aBeeZee().fontFamily,
       ),
-      home: const HomeScreen(),
+      initialRoute: MyRoutes().buttons,
+      routes: {
+        MyRoutes().buttons: (context) => HomeScreen(),
+        MyRoutes().snakebar: (context) => Snakbar(),
+        MyRoutes().tbsa: (context) => TBsD(),
+      },
     );
   }
 }
